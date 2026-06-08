@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentaci&oacute;n &mdash; T2U2 DWI | CineSpot</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .deck {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 4rem;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .slide.active { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #f5c518;
+      margin-bottom: 1rem;
+    }
+
+    .slide h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: #e50914;
+      margin-bottom: 1.5rem;
+    }
+
+    .slide p, .slide li {
+      font-size: 1.15rem;
+      max-width: 800px;
+      line-height: 1.7;
+      opacity: 0.92;
+    }
+
+    .slide ul {
+      text-align: left;
+      list-style: none;
+      max-width: 700px;
+    }
+
+    .slide ul li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .slide ul li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #e50914;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin-top: 1rem;
+    }
+
+    .rol-card {
+      background: rgba(229, 9, 20, 0.15);
+      border: 1px solid #e50914;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .rol-card strong {
+      display: block;
+      color: #f5c518;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flow-diagram {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+      text-align: left;
+      line-height: 1.8;
+      color: #cccccc;
+      max-width: 650px;
+    }
+
+    .repo-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background: #e50914;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .repo-link:hover { background: #b20710; }
+
+    .nav-bar {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .nav-bar button {
+      padding: 0.75rem 1.5rem;
+      background: rgba(229, 9, 20, 0.35);
+      border: 1px solid #e50914;
+      color: #f5f5f5;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .nav-bar button:hover { background: #e50914; }
+
+    .counter {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter"><span id="current">1</span> / <span id="total">8</span></div>
+
+  <div class="deck">
+    <section class="slide active">
+      <h1>CineSpot</h1>
+      <p>Cat&aacute;logo de pel&iacute;culas y series &mdash; T2U2 DWI</p>
+      <a class="repo-link" href="https://github.com/JaimeP-0/T2U2-DWI" target="_blank">github.com/JaimeP-0/T2U2-DWI</a>
+    </section>
+
+    <section class="slide">
+      <h2>Objetivo del proyecto</h2>
+      <p>Crear una landing page con HTML y CSS para un cat&aacute;logo ficticio de pel&iacute;culas y series, demostrando adem&aacute;s el uso profesional de Git y GitHub con ramas, pull requests, revisi&oacute;n de c&oacute;digo y resoluci&oacute;n de conflictos.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Integrantes y roles</h2>
+      <div class="roles">
+        <div class="rol-card"><strong>Integrante &uacute;nico</strong>Jaime Puente<br>Proyecto individual</div>
+        <div class="rol-card"><strong>L&iacute;der</strong>Coordinaci&oacute;n y decisiones</div>
+        <div class="rol-card"><strong>Documentador</strong>README y presentaci&oacute;n</div>
+        <div class="rol-card"><strong>Integrador / Dise&ntilde;ador</strong>PRs, merge y estilos visuales</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Estructura del sitio web</h2>
+      <ul>
+        <li>Varias paginas HTML enlazadas (sin anclas #)</li>
+        <li>Header con navegacion entre paginas</li>
+        <li>Tarjetas de cat&aacute;logo (pel&iacute;culas, series, top semanal)</li>
+        <li>Presentaci&oacute;n del equipo T2U2</li>
+        <li>Formulario para sugerir t&iacute;tulos</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Flujo de trabajo Git</h2>
+      <div class="flow-diagram">
+main ---- codigo estable (produccion)<br>
+  |<br>
+  +-- dev ---- HTML + CSS base<br>
+  |<br>
+  +-- diseno -- mejoras visuales<br>
+        |<br>
+        +-- PR -&gt; revision -&gt; merge -&gt; main
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Pull Request y revisi&oacute;n</h2>
+      <ul>
+        <li>PR creado desde <strong>dev</strong> hacia <strong>main</strong></li>
+        <li>Revisi&oacute;n de c&oacute;digo en rol de integrador (proyecto individual)</li>
+        <li>Comentarios sobre estructura HTML y accesibilidad</li>
+        <li>Aprobaci&oacute;n antes del merge</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Resoluci&oacute;n de conflictos</h2>
+      <ul>
+        <li>Conflicto en <code>index.html</code> &mdash; etiqueta &lt;title&gt;</li>
+        <li>Rama <strong>dev</strong>: &quot;CineSpot | Estrenos y Series&quot;</li>
+        <li>Rama <strong>diseno</strong>: &quot;CineSpot | T2U2 DWI&quot;</li>
+        <li>Resoluci&oacute;n: se mantuvo &quot;CineSpot | T2U2 DWI&quot;</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Conclusi&oacute;n</h2>
+      <p>El proyecto cumple con los requisitos de ramas, commits descriptivos, PR con revisi&oacute;n y resoluci&oacute;n de conflictos. CineSpot es responsive y tiene est&eacute;tica de cine.</p>
+      <a class="repo-link" href="https://github.com/JaimeP-0/T2U2-DWI" target="_blank">Ver repositorio en GitHub</a>
+    </section>
+  </div>
+
+  <div class="nav-bar">
+    <button id="prev">&larr; Anterior</button>
+    <button id="next">Siguiente &rarr;</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+      document.getElementById('current').textContent = i + 1;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') document.getElementById('next').click();
+      if (e.key === 'ArrowLeft') document.getElementById('prev').click();
+    });
+  </script>
+</body>
+</html>

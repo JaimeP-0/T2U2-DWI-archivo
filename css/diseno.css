@@ -1,0 +1,23 @@
+﻿/* Estilos de diseno - rama diseno */
+.hero h1 {
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(229, 9, 20, 0.35);
+}
+
+.card {
+  border-top: 3px solid var(--color-primario);
+}
+
+.miembro:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--color-secundario);
+  transition: color 0.3s ease;
+}
+
+.contacto {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(229, 9, 20, 0.06) 100%);
+}
