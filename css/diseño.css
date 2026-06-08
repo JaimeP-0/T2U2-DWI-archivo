@@ -1,0 +1,19 @@
+/* Estilos de diseño - rama diseño */
+.hero h1 {
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(27, 67, 50, 0.1);
+}
+
+.card {
+  border-top: 3px solid var(--color-secundario);
+}
+
+.miembro:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.contacto {
+  background: linear-gradient(180deg, transparent 0%, rgba(183, 228, 199, 0.3) 100%);
+  border-radius: var(--radio);
+}
