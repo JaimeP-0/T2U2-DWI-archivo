@@ -3,27 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoVerde</title>
+  <meta name="description" content="EcoVerde - Campaña de conciencia ambiental">
+  <title>EcoVerde | Conciencia Ambiental</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header class="header">
     <nav class="nav">
       <a href="#" class="logo">EcoVerde</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="inicio" class="hero">
       <div class="hero-content">
         <h1>Cuidemos juntos nuestro planeta</h1>
-        <p>Proyecto web del equipo T2U2 para Desarrollo Web Integral.</p>
+        <p>Proyecto web desarrollado por el equipo T2U2 para la materia de Desarrollo Web Integral.</p>
+        <a href="#servicios" class="btn btn-primary">Conoce más</a>
       </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Reforestación</h3>
+          <p>Programas de plantación de árboles en comunidades urbanas y rurales.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">♻️</div>
+          <h3>Reciclaje</h3>
+          <p>Talleres educativos sobre separación de residuos y economía circular.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💧</div>
+          <h3>Agua limpia</h3>
+          <p>Iniciativas para la conservación de fuentes de agua y reducción de contaminación.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="equipo" class="equipo">
+      <h2>Equipo T2U2</h2>
+      <div class="equipo-grid">
+        <div class="miembro">
+          <span class="rol">Líder</span>
+          <h3>Jaime Pérez</h3>
+          <p>Coordinación del proyecto y decisiones técnicas.</p>
+        </div>
+        <div class="miembro">
+          <span class="rol">Documentador</span>
+          <h3>María López</h3>
+          <p>README, presentación y documentación del flujo de trabajo.</p>
+        </div>
+        <div class="miembro">
+          <span class="rol">Integrador</span>
+          <h3>Carlos Ruiz</h3>
+          <p>Integración de ramas, pull requests y resolución de conflictos.</p>
+        </div>
+        <div class="miembro">
+          <span class="rol">Diseñador</span>
+          <h3>Ana García</h3>
+          <p>Diseño visual, paleta de colores y experiencia de usuario.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <form class="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 EcoVerde — T2U2 DWI</p>
+    <p>&copy; 2026 EcoVerde — Proyecto T2U2 DWI. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
