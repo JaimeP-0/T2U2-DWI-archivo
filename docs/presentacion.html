@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación — T2U2 DWI | EcoVerde</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0d1f17;
+      color: #e8f5e9;
+      overflow: hidden;
+    }
+
+    .deck {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 4rem;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .slide.active { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #95d5b2;
+      margin-bottom: 1rem;
+    }
+
+    .slide h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: #74c69d;
+      margin-bottom: 1.5rem;
+    }
+
+    .slide p, .slide li {
+      font-size: 1.15rem;
+      max-width: 800px;
+      line-height: 1.7;
+      opacity: 0.92;
+    }
+
+    .slide ul {
+      text-align: left;
+      list-style: none;
+      max-width: 700px;
+    }
+
+    .slide ul li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .slide ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #40916c;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin-top: 1rem;
+    }
+
+    .rol-card {
+      background: rgba(64, 145, 108, 0.2);
+      border: 1px solid #40916c;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .rol-card strong {
+      display: block;
+      color: #95d5b2;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .flow-diagram {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+      text-align: left;
+      line-height: 1.8;
+      color: #b7e4c7;
+      max-width: 650px;
+    }
+
+    .repo-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background: #40916c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .repo-link:hover { background: #2d6a4f; }
+
+    .nav-bar {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .nav-bar button {
+      padding: 0.75rem 1.5rem;
+      background: rgba(64, 145, 108, 0.4);
+      border: 1px solid #40916c;
+      color: #e8f5e9;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .nav-bar button:hover { background: #40916c; }
+
+    .counter {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter"><span id="current">1</span> / <span id="total">8</span></div>
+
+  <div class="deck">
+    <!-- Slide 1 -->
+    <section class="slide active">
+      <h1>EcoVerde</h1>
+      <p>Proyecto web T2U2 DWI — Desarrollo Web Integral</p>
+      <a class="repo-link" href="https://github.com/JaimeP-0/T2U2-DWI" target="_blank">github.com/JaimeP-0/T2U2-DWI</a>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <h2>Objetivo del proyecto</h2>
+      <p>Crear una landing page con HTML y CSS que promueva la conciencia ambiental, demostrando además el uso profesional de Git y GitHub con ramas, pull requests, revisión de código y resolución de conflictos.</p>
+    </section>
+
+    <!-- Slide 3 -->
+    <!-- Slide 3 -->
+    <section class="slide">
+      <h2>Integrantes y roles</h2>
+      <div class="roles">
+        <div class="rol-card"><strong>Líder</strong>Jaime Pérez<br>Coordinación y decisiones</div>
+        <div class="rol-card"><strong>Documentador</strong>María López<br>README y presentación</div>
+        <div class="rol-card"><strong>Integrador</strong>Carlos Ruiz<br>PRs y merge de ramas</div>
+        <div class="rol-card"><strong>Diseñador</strong>Ana García<br>Estilos y UX visual</div>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <h2>Estructura del sitio web</h2>
+      <ul>
+        <li>Header con navegación sticky</li>
+        <li>Sección hero con llamada a la acción</li>
+        <li>Tarjetas de servicios (reforestación, reciclaje, agua)</li>
+        <li>Presentación del equipo T2U2</li>
+        <li>Formulario de contacto</li>
+      </ul>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide">
+      <h2>Flujo de trabajo Git</h2>
+      <div class="flow-diagram">
+main    ──── código estable (producción)<br>
+  │<br>
+  ├── dev     ──── HTML + CSS base<br>
+  │<br>
+  └── diseño  ──── mejoras visuales<br>
+        │<br>
+        └── PR → revisión → merge → main
+      </div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide">
+      <h2>Pull Request y revisión</h2>
+      <ul>
+        <li>PR creado desde <strong>dev</strong> hacia <strong>main</strong></li>
+        <li>Revisión de código por Carlos Ruiz (Integrador)</li>
+        <li>Comentarios sobre estructura HTML y accesibilidad</li>
+        <li>Aprobación antes del merge</li>
+      </ul>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide">
+      <h2>Resolución de conflictos</h2>
+      <ul>
+        <li>Conflicto en <code>index.html</code> — etiqueta &lt;title&gt;</li>
+        <li>Rama <strong>dev</strong>: "EcoVerde | Conciencia Ambiental"</li>
+        <li>Rama <strong>diseño</strong>: "EcoVerde | T2U2 DWI"</li>
+        <li>Resolución: se mantuvo "EcoVerde | T2U2 DWI"</li>
+      </ul>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide">
+      <h2>Conclusión</h2>
+      <p>El proyecto cumple con los requisitos de ramas, commits descriptivos, PR con revisión y resolución de conflictos. El sitio EcoVerde es responsive y accesible.</p>
+      <a class="repo-link" href="https://github.com/JaimeP-0/T2U2-DWI" target="_blank">Ver repositorio en GitHub</a>
+    </section>
+  </div>
+
+  <div class="nav-bar">
+    <button id="prev">← Anterior</button>
+    <button id="next">Siguiente →</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+      document.getElementById('current').textContent = i + 1;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') document.getElementById('next').click();
+      if (e.key === 'ArrowLeft') document.getElementById('prev').click();
+    });
+  </script>
+</body>
+</html>
